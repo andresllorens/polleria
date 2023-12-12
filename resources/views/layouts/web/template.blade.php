@@ -23,7 +23,7 @@
             <div class="container" >
                 <div class="navbar-header">
                     <img src="{{ url('images/logo.min.png') }}" alt="logo" style="margin-left: -15px;float: left;height: 30px; padding-left: 20px; padding-right: 4px; margin-top: 10px;">
-                    <a href="{{url('/')}}" class="navbar-brand"><b>Intranet</b>HI</a>
+                    <a href="{{url('/')}}" class="navbar-brand"><b>Mi Polleria</b></a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                         <i class="fa fa-bars"></i>
                     </button>
