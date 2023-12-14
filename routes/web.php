@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WebApp\InicioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +20,14 @@ Route::group(['prefix' => 'webapp', 'namespace' => 'App\Http\Controllers\WebApp'
 });
 
 // Registro e inicio de sesion.
+Route::namespace('App\Http\Controllers')->group(function () {
+    Route::post('/validar-registro', 'LoginController@register')->name('validar-registro');
+    Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+});
 
-Route::view('/login', "login")->name('login');
-Route::view('/registro', "register")->name('registro');
+Route::view('/login', "auth.login")->name('login');
+Route::view('/register', "auth.register")->name('registro');
+Route::view('/privada', "auth.secret")->name('privada');
 
-Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
-Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+

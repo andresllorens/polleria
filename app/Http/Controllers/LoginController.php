@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    public function registerView() {
+        return view('auth.register');
+    }
+
     public function register(Request $request)
     {
         // validar datos

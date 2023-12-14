@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Intranet HI</title>
+    <title>Mi Polleria</title>
     <link rel="shortcut icon" href="{{url('favicon.ico')}}">
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -206,10 +206,7 @@
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <div class="container" >
-            <div class="pull-right hidden-xs">
-                Sociedad de Beneficencia <b>Hospital Italiano</b>.
-            </div>
-            <strong>Copyright &copy; {{date('Y')}} <a href="">Sistemas HI</a>.</strong>
+            <strong>Copyright &copy; {{date('Y')}} <a href="">Mi Polleria</a>.</strong>
         </div>
         <!-- /.container -->
     </footer>

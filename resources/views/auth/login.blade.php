@@ -54,8 +54,6 @@
         </form>
 
         <a href="{{ url('/password/reset') }}">Olvidé mi contraseña</a><br><br>
-        <a href="{{ url('/register') }}" class="text-center">Register a new membership</a>
-
     </div>
     <!-- /.login-box-body -->
 </div>
